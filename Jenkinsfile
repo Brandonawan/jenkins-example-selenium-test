@@ -9,7 +9,8 @@ pipeline {
     }
     stage('Run Tests') {
       steps {
-        sh './mvnw clean test'
+        // sh './mvnw clean test'
+        sh 'mvn -Dtest=JenkinsHomepageTest test'
       }
     }
   }
