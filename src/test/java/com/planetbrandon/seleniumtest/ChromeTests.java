@@ -108,7 +108,7 @@ class ChromeTests {
         driver.get(sutUrl);
         String title = driver.getTitle();
         log.debug("The title of {} is {}", sutUrl, title);
-        assertThat(title).contains("Selenium WebDriver");
+        assertThat(title).contains("CurbcutOS");
     }
 
 }
