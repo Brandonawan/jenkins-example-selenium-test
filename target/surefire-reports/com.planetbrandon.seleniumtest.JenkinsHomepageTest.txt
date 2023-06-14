@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.planetbrandon.seleniumtest.JenkinsHomepageTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.552 s -- in com.planetbrandon.seleniumtest.JenkinsHomepageTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.27 s -- in com.planetbrandon.seleniumtest.JenkinsHomepageTest
