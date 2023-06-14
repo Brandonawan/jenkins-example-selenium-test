@@ -104,7 +104,7 @@ class ChromeTests {
 
     @Test
     void test() {
-        String sutUrl = "https://bonigarcia.dev/selenium-webdriver-java/";
+        String sutUrl = "http://3.109.132.239:8080/";
         driver.get(sutUrl);
         String title = driver.getTitle();
         log.debug("The title of {} is {}", sutUrl, title);
