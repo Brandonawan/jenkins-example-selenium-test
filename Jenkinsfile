@@ -16,18 +16,19 @@ pipeline {
         // sh 'mvn -Dtest=JenkinsHomepageTest test'
       }
     }
+  }
 
-    post {
-      success {
-        publishHTML([
-          allowMissing: false,
-          alwaysLinkToLastBuild: false,
-          keepAll: false,
-          reportDir: 'target',
-          reportFiles: 'surefire-report.html',
-          reportName: 'Surefire Report',
-        ])
-      }
+  post {
+    success {
+      publishHTML([
+        allowMissing: false,
+        alwaysLinkToLastBuild: false,
+        keepAll: false,
+        reportDir: 'target',
+        reportFiles: 'surefire-report.html',
+        reportName: 'Surefire Report',
+        reportTitles: '',
+      ])
     }
   }
 }
