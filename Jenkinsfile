@@ -6,7 +6,7 @@ pipeline {
       steps {
         sh 'google-chrome --version'
         // sh 'firefox --version'
-        echo 'chrome browser is installed'
+        echo 'Chrome browser is installed'
       }
     }
 
@@ -15,10 +15,19 @@ pipeline {
         sh './mvnw clean test'
         // sh 'mvn -Dtest=JenkinsHomepageTest test'
       }
-      post {
+    }
+
+    post {
       success {
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target', reportFiles: 'surefire-report.html', reportName: 'Surefire Report', reportTitles: '', useWrapperFileDirectly: true])      }
+        publishHTML([
+          allowMissing: false,
+          alwaysLinkToLastBuild: false,
+          keepAll: false,
+          reportDir: 'target',
+          reportFiles: 'surefire-report.html',
+          reportName: 'Surefire Report',
+        ])
+      }
     }
   }
-}
 }
