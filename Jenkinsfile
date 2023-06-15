@@ -16,14 +16,14 @@ pipeline {
     }
     stage('Publish HTML Report') {
       steps {
+        // Assuming your HTML report file is named 'report.html' and located in the target directory
         publishHTML(target: [
           allowMissing: false,
-          alwaysLinkToLastBuild: true,
+          alwaysLinkToLastBuild: false,
           keepAll: true,
-          reportDir: 'target/surefire-reports',
-          reportFiles: 'index.html',
-          reportName: 'Test Report',
-          reportTitles: 'Test Results'
+          reportDir: 'target',
+          reportFiles: 'report.html',
+          reportName: 'HTML Report'
         ])
       }
     }
