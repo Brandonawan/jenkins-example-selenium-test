@@ -15,18 +15,9 @@ pipeline {
         sh './mvnw clean test'
         // sh 'mvn -Dtest=JenkinsHomepageTest test'
       }
-
       post {
-        success {
-          publishHTML (target : [allowMissing: false,
-          alwaysLinkToLastBuild: true,
-          keepAll: true,
-          reportDir: 'reports',
-          reportFiles: 'myreport.html',
-          reportName: 'My Reports',
-          reportTitles: 'The Report'])
-        }
-      }
+      success {
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target', reportFiles: 'surefire-report.html', reportName: 'Surefire Report', reportTitles: '', useWrapperFileDirectly: true])      }
     }
   }
 }
